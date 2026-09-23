@@ -14,12 +14,36 @@
     <p class="text-blue-100 mt-1">Los mejores productos al mejor precio</p>
   </header>
 
-  <!-- Contenido principal con el contenedor vacío para JS -->
-  <main class="max-w-6xl mx-auto p-6 w-full flex-grow">
-    <h2 class="text-2xl font-semibold mb-6 text-gray-700">Nuestro Catálogo</h2>
+  <!-- Contenido principal -->
+  <main class="max-w-6xl mx-auto p-6 w-full flex-grow grid grid-cols-1 lg:grid-cols-3 gap-8">
     
-    <!-- El div id="catalogo" queda vacío para que JavaScript cree las tarjetas aquí -->
-    <div id="catalogo" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6"></div>
+    <!-- Columna izquierda: Catálogo (ocupa 2 columnas en pantallas grandes) -->
+    <section class="lg:col-span-2">
+      <h2 class="text-2xl font-semibold mb-6 text-gray-700">Nuestro Catálogo</h2>
+      <div id="catalogo" class="grid grid-cols-1 sm:grid-cols-2 gap-6"></div>
+    </section>
+
+    <!-- Columna derecha: Mi Pedido (aside) -->
+    <aside class="bg-white p-6 rounded-lg shadow h-fit">
+      <h2 class="text-2xl font-bold text-gray-800 border-b pb-3 mb-4">Mi Pedido</h2>
+      
+      <!-- Lista donde se renderizan los productos añadidos -->
+      <ul id="lista-pedido" class="divide-y divide-gray-200 mb-4 max-h-80 overflow-y-auto">
+        <li class="text-gray-400 py-2 text-sm italic">El pedido está vacío.</li>
+      </ul>
+
+      <!-- Total del pedido -->
+      <div class="border-t pt-4 flex justify-between items-center font-bold text-lg text-gray-800 mb-6">
+        <span>Total:</span>
+        <span id="total" class="text-blue-600">$0.00</span>
+      </div>
+
+      <!-- Botón para vaciar el pedido -->
+      <button id="btn-vaciar" class="w-full bg-red-500 hover:bg-red-600 text-white font-medium py-2 rounded transition">
+        Vaciar pedido
+      </button>
+    </aside>
+
   </main>
 
   <!-- Pie de página -->
