@@ -17,9 +17,14 @@
   <!-- Contenido principal -->
   <main class="max-w-6xl mx-auto p-6 w-full flex-grow grid grid-cols-1 lg:grid-cols-3 gap-8">
     
-    <!-- Columna izquierda: Catálogo (ocupa 2 columnas en pantallas grandes) -->
+    <!-- Columna izquierda: Catálogo y Filtros -->
     <section class="lg:col-span-2">
-      <h2 class="text-2xl font-semibold mb-6 text-gray-700">Nuestro Catálogo</h2>
+      <h2 class="text-2xl font-semibold mb-4 text-gray-700">Nuestro Catálogo</h2>
+      
+      <!-- Contenedor para botones de filtro de categorías -->
+      <div id="filtros" class="flex flex-wrap gap-2 mb-6"></div>
+
+      <!-- Cuadrícula del catálogo -->
       <div id="catalogo" class="grid grid-cols-1 sm:grid-cols-2 gap-6"></div>
     </section>
 
